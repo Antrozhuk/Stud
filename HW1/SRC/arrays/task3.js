@@ -1,6 +1,7 @@
 'use strict'
 let n=+prompt('Введите размер массива','');
 let arr=[];
+let MinIndex=0;
 function randomInteger(min, max) 
 {
     let rand=min-0.5+Math.random()*(max-min+1);
@@ -11,18 +12,13 @@ for(let i=0;i<n;i++) //автозаполнение массива
    arr[i]=randomInteger(1,100);
 }
 alert("Массив: "+arr);
-for(let j=0;j<n;j++)
+let min=arr[0];
+for(let i=0;i<n;i++)
 {
-    let min=arr[j],i=j,k=j;
-    for(i;i<n;i++)
+    if(arr[i]<min)//поиск индекса минимального элемента 
     {
-        if(arr[i]<min)
-        {
-            min=arr[i];
-            k=i;
-        }
-    }
-    arr[k]=arr[j];
-    arr[j]=min;
+        min=arr[i];
+        MinIndex=i;
+    }   
 }
-alert(arr);
+alert(`Индекс минимального элемента ${MinIndex}`);

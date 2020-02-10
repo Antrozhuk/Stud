@@ -11,18 +11,10 @@ for(let i=0;i<n;i++) //автозаполнение массива
    arr[i]=randomInteger(1,100);
 }
 alert("Массив: "+arr);
-for(let j=0;j<n;j++)
+let min=arr[0];
+for(let i=0;i<n;i++)
 {
-    let min=arr[j],i=j,k=j;
-    for(i;i<n;i++)
-    {
-        if(arr[i]<min)
-        {
-            min=arr[i];
-            k=i;
-        }
-    }
-    arr[k]=arr[j];
-    arr[j]=min;
+    if(arr[i]<min)//поиск минимального элемента
+        min=arr[i];   
 }
-alert(arr);
+alert(`Минимальный элемент массива ${min}`);

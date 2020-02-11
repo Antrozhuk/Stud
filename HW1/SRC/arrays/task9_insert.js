@@ -10,7 +10,7 @@ for(let i=0;i<n;i++) //автозаполнение массива
 {
    arr[i]=randomInteger(1,100);
 }
-console.log("Массив: "+arr);
+console.log("Массив: ",arr);
 for(let i=1;i<n;i++)
 {
     let a=arr[i];let j=i;
@@ -22,4 +22,4 @@ for(let i=1;i<n;i++)
     arr[j]=a;
 }
 console.log(arr);
-console.log(arr);
+

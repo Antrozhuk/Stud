@@ -7,4 +7,4 @@ for(;;)
     n=Math.trunc(n/10);
     if(Math.trunc(n)<1) break;
 }
-console.log(`Сумма цифр числа ${a} равна `+sum);
+console.log(`Сумма цифр числа ${a} равна `,sum);

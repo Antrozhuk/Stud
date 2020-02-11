@@ -11,7 +11,7 @@ for(let i=0;i<n;i++) //автозаполнение массива
 {
    arr[i]=randomInteger(1,100);
 }
-console.log("Массив: "+arr);
+console.log("Массив: ",arr);
 let max=arr[0];
 for(let i=0;i<n;i++)
 {

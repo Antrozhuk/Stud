@@ -5,4 +5,3 @@ function getWeekDay(day){
 }
 let date=new Date(2019, 4, 18);
 console.log(getWeekDay(date));
-console.log(getWeekDay(date));

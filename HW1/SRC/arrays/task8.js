@@ -10,7 +10,7 @@ for(let i=0;i<n;i++) //автозаполнение массива
 {
    arr[i]=randomInteger(1,100);
 }
-console.log("Массив: "+arr);
+console.log("Массив: ",arr);
 //замена половин массива местами
 if(n%2==0){
     for(let i=0;i<n/2;i++)
@@ -29,4 +29,4 @@ else
         arr[i+(n+1)/2]=a;
     }
 }
-console.log("Массив с измененным порядком: "+arr);
+console.log("Массив с измененным порядком: ",arr);

@@ -16,4 +16,4 @@ for(let i=0;i<=ind;i++)
     sum+=(n%10)*(10**(ind-i));
     n=Math.trunc(n/10);
 }
-console.log('Зеркальное число:'+sum);
+console.log('Зеркальное число:',sum);

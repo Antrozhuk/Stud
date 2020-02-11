@@ -11,9 +11,9 @@ for(let i=0;i<n;i++) //автозаполнение массива
 {
    arr[i]=randomInteger(1,100);
 }
-console.log("Массив: "+arr);
+console.log("Массив: ",arr);
 for(let i=0;i<n;i++)
 {
     if(arr[i]%2!=0)amount++;//количество нечетных элементов 
 }
-console.log("Количество нечетных элементов массива: "+amount);
+console.log("Количество нечетных элементов массива: ",amount);

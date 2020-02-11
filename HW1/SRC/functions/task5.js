@@ -19,6 +19,24 @@ function NumbString(value){
         else if(b<10)  {if(a!=0)res=res+A1[a-1]; }     
     return res;
 }
-let n=123;
-console.log(NumbString(n));  
-
+let n=123456789101;
+let B=['милиард','милион','тысяч'],res='';
+for(let i=0;i<3;i++){
+    let k=Math.trunc(n/(10**(3*(3-i)))),s,C;
+    if(i<2)
+        C=['','a','ов'];
+    else 
+        C=['а','и',''];
+    if(k>0){
+        if(k%10==1)s=0;
+        if(k%10>1 && k%10<5)s=1;
+        if(k%10>4)s=2;
+        if(k%100>10 && k%100<20)s=2;
+        if(k%10==0)s=2;
+        res+=NumbString(k)+B[i];
+        res+=C[s];
+        n=n%(10**(3*(3-i)));
+    }
+} 
+res+=NumbString(n);
+console.log(res);  

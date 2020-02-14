@@ -176,5 +176,81 @@ console.log('55 ', symb);
 //56
 ///////////////////////////////////
 console.log('56 ', typeof symb);
-
+//57
+///////////////////////////////////
+let symbol=Symbol('name');
+console.log('57 ', symbol);
+let anotherSymbol=Symbol('name');
+console.log('   ', anotherSymbol);
+console.log('   ', symbol===anotherSymbol);
+//58
+///////////////////////////////////
+let symbol1=Symbol.for('name');
+console.log('58 ', symbol1);
+let name=Symbol.keyFor(symbol1);
+console.log('   ', name);
+console.log('   ', typeof name);
+//59
+///////////////////////////////////
+let object={
+    x:20,
+    y:30,
+}
+console.log('59 ',object.hasOwnProperty('x'))
+console.log('   ',object)
+delete object.y
+console.log('   ',object)
+//60
+///////////////////////////////////
+let newObject=Object.create({
+    x:20,
+    y:30,
+    test:()=>console.log('test'),
+})
+// let parent={
+//     x:20,
+//     y:30,
+//     test:()=>console.log('test')
+// }
+// let child=Object.create(parent)
+console.log('60 ',newObject.hasOwnProperty('x'))
+console.log('   ','x'in newObject)
+console.log('   ',newObject)
+console.log('   ',newObject.__proto__)
+console.log('   ',__proto__)
+//61
+///////////////////////////////////
+const array=['61  q','    w','    e']
+for(const key of array)console.log(key)
+//62
+///////////////////////////////////
+function hiName(name) {
+    return '62  Hello '+name+'!';
+}
+console.log(hiName('Anton'))
+//63
+///////////////////////////////////
+let myFunc=function(name) {
+    return '63  Hello '+name+'!';
+}
+console.log(myFunc('Anton'))
+//64
+///////////////////////////////////
+const qwe=()=>{return 'qwe'}
+console.log('64 ',qwe)
+//65
+///////////////////////////////////
+let sum=new Function('a,b','return a+b;')
+console.log('65 ',sum(1,6))
+//66
+///////////////////////////////////
+setTimeout(function () {
+    console.log('66 ','qwe')
+},1000)
+//67
+///////////////////////////////////
+function F() {
+    console.log('67 ',arguments)
+}
+F('',1,[],{}) 
 

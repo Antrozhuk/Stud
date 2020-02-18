@@ -23,6 +23,6 @@ describe("проверка логики калькулятора",
             assert.equal(logic(1,0,'/'),Infinity)
         });
         it("02+.2 expected 2.2",function(){
-            assert.equal(logic(02,.2,'+'),2.2)
+            assert.equal(logic(2,.2,'+'),2.2)
         });
     });

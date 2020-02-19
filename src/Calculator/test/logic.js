@@ -22,7 +22,7 @@ describe("проверка логики калькулятора",
         it("1/0 expected infinity",function(){
             assert.equal(logic(1,0,'/'),Infinity)
         });
-        it("02+.2 expected 2.2",function(){
+        it("2+.2 expected 2.2",function(){
             assert.equal(logic(2,.2,'+'),2.2)
         });
     });

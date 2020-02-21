@@ -1,13 +1,4 @@
 'use strict'
-function logic(val1,val2,operator){
-    if(operator=='+')return val1+val2;
-        else 
-    if(operator=='-')return val1-val2;
-        else
-    if(operator=='*')return val1*val2;
-        else
-    if(operator=='/')return val1/val2;
-}
 describe("проверка логики калькулятора",
     function(){
         it("2+2 expected 4",function(){

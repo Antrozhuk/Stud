@@ -6,50 +6,6 @@
     <title>Calculator</title>
     <link rel="stylesheet" href="style.css">
     <script src="../test/logic.js"></script>
-   <script type="text/javascript">
-
-    var VanillaRunOnDomReady = function() {
-      
-(function(){
-  var body = document.body,
-      startX = -100,
-      startY = -100,
-      w = document.documentElement.offsetWidth,
-      h = document.documentElement.offsetHeight;
-
-	body.addEventListener('mousemove', function(evt){
-    var posX = Math.round(evt.clientX / w * startX)
-    var posY = Math.round(evt.clientY / h * startY)
-    body.style.backgroundPosition = posX + 'px ' + posY + 'px'
-  })
-})()
-
-    }
-
-var alreadyrunflag = 0;
-
-if (document.addEventListener)
-    document.addEventListener("DOMContentLoaded", function(){
-        alreadyrunflag=1; 
-        VanillaRunOnDomReady();
-    }, false);
-else if (document.all && !window.opera) {
-    document.write('<script type="text/javascript" id="contentloadtag" defer="defer" src="javascript:void(0)"><\/script>');
-    var contentloadtag = document.getElementById("contentloadtag")
-    contentloadtag.onreadystatechange=function(){
-        if (this.readyState=="complete"){
-            alreadyrunflag=1;
-            VanillaRunOnDomReady();
-        }
-    }
-}
-
-window.onload = function(){
-  setTimeout("if (!alreadyrunflag){VanillaRunOnDomReady}", 0);
-}
-
-  //]]>
-</script>
 </head>
 <body>
     <section id="sect" aria-disabled="true">
@@ -58,35 +14,35 @@ window.onload = function(){
     </div>
     <div class="line">
         <input id="ac" class="optional" type="button" value="AC"/>
-        <input id="square" class="functional"type="button" value="x^2"/>
-        <input id="sqrt" class="functional"type="button" value="&radic;"/>
+        <input class="optional" type="button" value="+/-"/>
+        <input class="optional" type="button" value="%"/>
         <input id="division" class="functional" type="button" value="/"/>
     </div>
     <div class="line">
-        <input id="seven" class="number" type="button" value="7" />
-        <input id="eight" class="number" type="button" value="8" />
-        <input id="nein" class="number" type="button" value="9"/>
+        <input class="number" type="button" value="7" />
+        <input class="number" type="button" value="8" />
+        <input class="number" type="button" value="9"/>
         <input id="multiplication" class="functional" type="button" value="*"/>
     </div>
     <div class="line">
-        <input id="four" class="number" type="button" value="4"/>
-        <input id="five" class="number" type="button" value="5"/>
-        <input id="six" class="number" type="button" value="6"/>
+        <input class="number" type="button" value="4"/>
+        <input class="number" type="button" value="5"/>
+        <input class="number" type="button" value="6"/>
         <input id="difference" class="functional" type="button" value="-"/>
     </div>
     <div class="line">
-        <input id="one" class="number" type="button" value="1"/>
-        <input id="two" class="number" type="button" value="2"/>
-        <input id="three" class="number" type="button" value="3"/>
+        <input class="number" type="button" value="1"/>
+        <input class="number" type="button" value="2"/>
+        <input class="number" type="button" value="3"/>
         <input id="sum" class="functional" type="button" value="+"/>
     </div>
     <div class="line">
         <input id="nul" class="number" type="button" value="0"/>
-        <input id="dot" class="number" type="button" value="."/>
-        <input id="equal" class="equal" type="button" value="="/>
+        <input id="dot" class="dot" type="button" value="."/>
+        <input id="equal" class="functional" type="button" value="="/>
     </div>
     </section>
-    <script  src="../test/logic.js" defer></script>
+    <script  src="./logic.js" defer></script>
     <script  src="./buttons.js" defer></script>
     
 </body>

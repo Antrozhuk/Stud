@@ -19,6 +19,16 @@ function NumbString(value){
         else if(b<10)  {if(a!=0)res=res+A1[a-1]; }     
     return res;
 }
-let n=123;
-console.log(NumbString(n));  
+describe("task2",function(){
+    it("123 => сто двадцать три",function(){
+        assert.equal(NumbString(123),' сто двадцать три ')
+    })
+    it("45 => сорок пять",function(){
+        assert.equal(NumbString(45),' сорок пять ')
+    })
+    it("55 => пятьсот пятьдесят пять",function(){
+        assert.equal(NumbString(555),' пятьсот пятьдесят пять ')
+    })
+})
+
 

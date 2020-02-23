@@ -1,14 +1,21 @@
 'use strict'
-let n=5;
-let arr=[];
-function randomInteger(min, max) 
-{
-    let rand=min-0.5+Math.random()*(max-min+1);
-    return Math.round(rand);
+function reverse(arr){
+    function ind(size){
+        if (size%2)return (size-1)/2
+        else return size/2
+    }
+    for(let i=0;i<ind(arr.length);i++){
+        let a=arr[i]
+        arr[i]=arr[arr.length-(i+1)]
+        arr[arr.length-(i+1)]=a
+    }
+    return arr
 }
-for(let i=0;i<n;i++) //автозаполнение массива
-{
-   arr[i]=randomInteger(1,100);
-}
-console.log("Массив: ",arr);
-console.log("Массив в обратном порядке: ",arr.reverse());//реверс массива
+describe("task6",function(){
+    it("[1,3,5,1]=>[1,5,3,1]",function(){
+        assert.deepEqual(reverse([1,3,5,1]),[1,5,3,1])
+    })
+    it("[12,45,78]=>[78,45,12]",function(){
+        assert.deepEqual(reverse([12,45,78]),[78,45,12])
+    })
+})

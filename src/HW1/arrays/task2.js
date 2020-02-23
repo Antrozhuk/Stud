@@ -1,20 +1,18 @@
 'use strict'
-let n=5;
-let arr=[];
-function randomInteger(min, max) 
-{
-    let rand=min-0.5+Math.random()*(max-min+1);
-    return Math.round(rand);
-}
-for(let i=0;i<n;i++) //автозаполнение массива
-{
-   arr[i]=randomInteger(1,100);
-}
-console.log("Массив: ",arr);
+function maxArr(arr){
 let max=arr[0];
-for(let i=0;i<n;i++)
+for(let i=0;i<arr.length;i++)
 {
     if(arr[i]>max)//поиск максимального элемента
         max=arr[i];
 }
-console.log(`Максимальный элемент массива ${max}`);
+return max;
+}
+describe("task2",function(){
+    it("[4,7,9,7,3,5,9,4]=>9",function(){
+        assert.equal(maxArr([4,7,9,7,3,5,9,4]),9)
+    })
+    it("[-4,7,-9,17,3,5,0,4]=>17",function(){
+        assert.equal(maxArr([-4,7,-9,17,3,5,0,4]),17)
+    })
+})

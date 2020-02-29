@@ -8,7 +8,7 @@ Alist.prototype.init=function(){
     this.arr=[]
     this.defaultArray
     index=0;
-    while(this.defaultArray[index]){
+    while(this.defaultArray[index]||(this.defaultArray[index]===0)){
         this.arr[index]=this.defaultArray[index]
         index++
     }
@@ -60,6 +60,7 @@ Alist.prototype.delEnd=function(){
 Alist.prototype.delPosition=function(index){
     let elem=this.arr[index]
     let arrPosDel=[]
+    for(let i=0;i<index;i++)arrPosDel[i]=this.arr[i]
     for(let i=index;i<this.arr.length-1;i++)
     {
         arrPosDel[i]=this.arr[i+1]
@@ -106,7 +107,7 @@ Alist.prototype.clear=function(){
 ///////////////////////////////
 Alist.prototype.min=function(){
     let min=this.arr[0]
-    for(let i of this.arr){
+    for(let i =1;i<this.size();i++){
         if (this.arr[i]<min)min=this.arr[i]
     }
     return min
@@ -115,7 +116,7 @@ Alist.prototype.min=function(){
 ///////////////////////////////
 Alist.prototype.max=function(){
     let max=this.arr[0]
-    for(let i of this.arr){
+    for(let i =1;i<this.size();i++){
         if (this.arr[i]>max)max=this.arr[i]
     }
     return max
@@ -142,21 +143,23 @@ Alist.prototype.sort=function(){
 Alist.prototype.minIndex=function(){
     let min=this.arr[0]
     let minIndex=0
-    for(let i of this.arr){
-        if (this.arr[i]<min){min=this.arr[i];this.minIndex=i}
+    for(let i =1;i<this.size();i++){
+        if (this.arr[i]<min){min=this.arr[i];minIndex=i}
     }
-    return this.minIndex
+    return minIndex
 }
 //15
 ////////////////////////////////////
 Alist.prototype.maxIndex=function(){
     let max=this.arr[0]
     let maxIndex=0
-    for(let i of this.arr){
+    for(let i =1;i<this.size();i++){
         if (this.arr[i]>max){max=this.arr[i];maxIndex=i}
     }
     return maxIndex
 }
+//16
+///////////////////////////////////
 Alist.prototype.reverse=function(){
     function ind(size){
         if (size%2)return (size-1)/2
@@ -169,6 +172,8 @@ Alist.prototype.reverse=function(){
     }
     return this.arr
 }
+//17
+///////////////////////////////////////
 Alist.prototype.halfReverse=function(){
     function ind(size){
         if (size%2)return (size-1)/2
@@ -190,5 +195,21 @@ Alist.prototype.halfReverse=function(){
     }
     return this.arr=halfArr
 }
-
-
+//18
+///////////////////////////////////////////////
+Alist.prototype.addPosition=function(elem,ind){
+    let arrPosAdd=[]
+    arrPosAdd[ind]=elem
+    for(let i=0;i<ind;i++)arrPosAdd[i]=this.arr[i]
+    for(let i=ind;i<this.size();i++)arrPosAdd[i+1]=this.arr[i]
+    this.arr=arrPosAdd
+    return elem
+}
+//19
+/////////////////////////
+Alist.prototype.toArray=function(){
+    for(let i=0;i<this.size();i++){
+        this.arr[i]=+this.arr[i]
+    }
+    return this.arr
+}

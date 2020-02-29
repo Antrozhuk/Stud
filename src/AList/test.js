@@ -70,7 +70,7 @@ describe("size",function(){
 let defolt=new Alist([8,5,2,4,7])
 defolt.delStart
 describe("clear",function(){
-    it("[5,2,4,7] => [8,5,2,4,7]",function(){
+    it("delStart -> [5,2,4,7] => [8,5,2,4,7]",function(){
         assert.deepEqual(defolt.clear(),[8,5,2,4,7])
     });
 });
@@ -122,6 +122,21 @@ describe("halfReverse",function(){
     let halfRev1=new Alist([5,2,4,7])
     it("[5,2,4,7] => [2,5,7,4]",function(){
         assert.deepEqual(halfRev1.halfReverse(),[2,5,7,4])
+    });
+});
+let addPos=new Alist([8,5,2,4,7])
+describe("addPosition",function(){
+    it("[8,5,2,4,7] elem=10, ind=3 => 10",function(){
+        assert.deepEqual(addPos.addPosition(10,3),10)
+    });
+    it("[8,5,2,4,7] elem=10, ind=3 => [8,5,2,10,4,7]",function(){
+        assert.deepEqual(addPos.arr,[8,5,2,10,4,7])
+    });
+});
+let toArr=new Alist('85247')
+describe("toArray",function(){
+    it("'85247' => [8,5,2,4,7]",function(){
+        assert.deepEqual(toArr.toArray(),[8,5,2,4,7])
     });
 });
 

@@ -1,0 +1,66 @@
+{
+    "name": "a-list",
+    "version": "1.0.0",
+    "scripts": {
+        "test": "nyc mocha --opts ./mocha.opts",
+        "lint:js": "eslint --ext .js src"
+    },
+    "dependencies": {
+        "@babel/register": "7.8.3",
+        "chai": "4.2.0",
+        "esm": "3.2.25",
+        "jsdom": "16.2.0",
+        "localStorage": "1.0.4",
+        "mocha": "7.1.0",
+        "nyc": "15.0.0",
+        "raf": "3.4.1",
+        "sinon": "9.0.0",
+        "babel-eslint": "10.0.3",
+        "eslint": "6.8.0",
+        "eslint-config-airbnb": "18.0.1",
+        "eslint-config-prettier": "6.9.0",
+        "eslint-plugin-babel": "5.3.0",
+        "eslint-plugin-import": "2.19.1",
+        "eslint-plugin-prettier": "3.1.2",
+        "eslint-plugin-react-hooks": "2.3.0",
+        "eslint-plugin-jsx-a11y": "6.2.3",
+        "eslint-plugin-react": "7.18.3",
+        "prettier": "1.19.1"
+    },
+    "nyc": {
+        "extension": [
+            ".js"
+        ],
+        "check-coverage": true,
+        "per-file": true,
+        "lines": 90,
+        "statements": 90,
+        "functions": 90,
+        "branches": 90,
+        "reporter": [
+            "html",
+            "text",
+            "text-summary"
+        ],
+        "require": [
+            "@babel/register"
+        ],
+        "exclude": [
+            "coverage/**",
+            "tests/**",
+            "test{,-*}.js",
+            "**/*.test.js",
+            "**/__tests__/**",
+            "**/node_modules/**",
+            ".nyc_output/**",
+            ".nyc_output-tmp/**",
+            "**/mockData/**",
+            "testConfig/**",
+            "**/mock{,*}.js"
+        ],
+        "sourceMap": false,
+        "cache": false,
+        "all": false,
+        "report-dir": "coverage"
+    }
+}

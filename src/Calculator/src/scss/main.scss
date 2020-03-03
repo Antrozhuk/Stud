@@ -1,0 +1,154 @@
+.firstLine{ 
+  padding: 50px 0 0 0;
+  display: grid;
+  justify-items: center;
+}
+.line{ 
+  display: flex;
+  justify-content: center;  
+}
+.textarea{
+  display: block;
+  color:lightgrey;
+  text-align: right;
+  text-align: top;
+  font-size:60px;
+  width: 302px;
+  height: 100px;
+  background-color: rgb(29, 29, 29); 
+  border-style:solid;
+  border-color:black;
+}
+.optional{
+  background-color: rgb(55, 55, 55);
+  color: lightgrey;
+  font-size: 25px;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  display:block;
+  width: 229.5px;
+  height: 61.5px;
+  transition: all 0.2s ease;
+  border-style: solid;
+  border-color: black;
+  border-width: 0.5px;
+  outline: none;
+}
+.optional:hover{
+  background-color: rgb(211, 211, 211);
+  color: rgb(36, 51, 51);
+  cursor: pointer;
+  transition: all 0.20s ease;
+}
+.functional{
+  background-color:orange;
+  color: rgb(100, 100, 100);
+  font-weight: bold;
+  font-size: 25px;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  display:block;
+  width: 76.5px;
+  height: 61.5px;
+  transition: all 0.2s ease;
+  border-style: solid;
+  border-color:black;
+  border-width: 0.5px;
+  outline: none;
+}
+.functional:hover{
+  background-color: rgb(211, 211, 211);
+  color: rgb(36, 51, 51);
+  cursor: pointer;
+  transition: all 0.20s ease;
+}
+.number{
+  background-color: rgb(110, 110, 110);
+  color:white;
+  font-size: 25px;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  display:block;
+  width: 76.5px;
+  height: 61.5px;
+  transition: all 0.2s ease;
+  border-style: solid;
+  border-color:black;
+  border-width: 0.5px;
+  outline: none;
+}
+.number:hover{
+  background-color: rgb(211, 211, 211);
+  color: rgb(36, 51, 51);
+  cursor: pointer;
+  transition: all 0.20s ease;
+}
+.dot{
+  background-color: rgb(110, 110, 110);
+  color:white;
+  font-size: 25px;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  display:block;
+  width: 76.5px;
+  height: 61.5px;
+  transition: all 0.2s ease;
+  border-style: solid;
+  border-color:black;
+  border-width: 0.5px;
+  outline: none;
+}
+.dot:hover{
+  background-color: rgb(211, 211, 211);
+  color: rgb(36, 51, 51);
+  cursor: pointer;
+  transition: all 0.20s ease;
+}
+#nul{
+  background-color: rgb(110, 110, 110);
+  color:white;
+  font-size: 25px;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  display:block;
+  width: 153px;
+  height: 61.5px;
+  transition: all 0.2s ease;
+  border-style: solid;
+  border-color:black;
+  border-width: 0.5px;
+  outline: none;
+}
+#nul:hover{
+  background-color: lightgrey;
+  color: rgb(36, 51, 51);
+  cursor: pointer;
+  transition: all 0.20s ease;
+}
+.equal{
+  background-color: orange;
+  color:rgb(100, 100, 100);
+  font-weight: bold;
+  font-size: 25px;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  display:block;
+  width: 76.5px;
+  height: 61.5px;
+  transition: all 0.2s ease;
+  border-style: solid;
+  border-color: black;
+  border-width: 0.5px;
+  outline: none;
+}
+.equal:hover{
+  color: rgb(36, 51, 51);
+  cursor: pointer;
+  transition: all 0.20s ease;
+}

@@ -1,0 +1,58 @@
+.section-2 {
+  padding: 120px;
+
+  &__header {
+    text-align: center;
+  }
+
+  .header {
+    &__title {
+      font-weight: 400;
+      font-size: 36px;
+    }
+    &__text {
+
+    }
+  }
+
+  &__cards {
+    display: flex;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .cards {
+    &__card {
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      border: 1px solid gray;
+      margin-right: 40px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .card {
+    &__title {
+      margin: 0;
+      font-weight: 600;
+    }
+    &__text {
+      margin: 0;
+    }
+  }
+
+  .divider-block {
+    &__divider {
+      display: inline-block;
+      border: 1px solid;
+      border-image: $baseGradientHorizontal;
+      border-image-slice: 1;
+      width: 10%;
+      flex-shrink: 1;
+    }
+  }
+}

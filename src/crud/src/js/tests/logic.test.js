@@ -35,8 +35,17 @@ describe('update tests', () => {
     it('Person age', () => {
         assert.equal(func.update(Bro,3,"Yana","Shuvaieva",21).age, 21);
     })
+    it('Only fName', () => {
+        assert.equal(func.update(Bro,3,"Yanina",'',).fName, "Yanina");
+    })
+    it('Only lName', () => {
+        assert.equal(func.update(Bro,3,'',"Shuvaeva",).lName, "Shuvaeva");
+    })
+    it('Only age', () => {
+        assert.equal(func.update(Bro,3,'','',20).age, 20);
+    })
     it('localStorage', () => {
-        assert.equal(localStorage.getItem(3),'{"id":3,"fName":"Yana","lName":"Shuvaieva","age":21}');
+        assert.equal(localStorage.getItem(3),'{"id":3,"fName":"Yanina","lName":"Shuvaeva","age":20}');
     })
 })
 describe('delete tests', () => {
@@ -55,12 +64,12 @@ describe('read test', () => {
         assert.equal(func.read(3).id, 3);
     })
     it('localStorage fName', () => {
-        assert.equal(func.read(3).fName, "Yana");
+        assert.equal(func.read(3).fName, "Yanina");
     })
     it('localStorage lName', () => {
-        assert.equal(func.read(3).lName, "Shuvaieva");
+        assert.equal(func.read(3).lName, "Shuvaeva");
     })
     it('localStorage age', () => {
-        assert.equal(func.read(3).age, 21);
+        assert.equal(func.read(3).age, 20);
     })
 })
